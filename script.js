@@ -5,32 +5,32 @@ var titleBar = document.getElementById("title-bar");
 
 ////////////////// Hover listeners //////////////////
 minimize.addEventListener('mouseover', function handleMouseOver() {
-  minimize.style.backgroundColor = '#272727';
+  minimize.style.backgroundColor = 'rgba(0, 0, 0, 0.09765625)';
   minimize.style.cursor = 'context-menu';
 });
 
 minimize.addEventListener('mouseout', function handleMouseOut() {
-  minimize.style.backgroundColor = 'black';
+  minimize.style.backgroundColor = '#d6dae0';
   minimize.style.cursor = 'default';
 });
 
 square.addEventListener('mouseover', function handleMouseOver() {
-  square.style.backgroundColor = '#272727';
+  square.style.backgroundColor = 'rgba(0, 0, 0, 0.09765625)';
   square.style.cursor = 'context-menu';
 });
 
 square.addEventListener('mouseout', function handleMouseOut() {
-  square.style.backgroundColor = 'black';
+  square.style.backgroundColor = '#d6dae0';
   square.style.cursor = 'default';
 });
 
 exit.addEventListener('mouseover', function handleMouseOver() {
-  exit.style.backgroundColor = 'red';
+  exit.style.backgroundColor = '#E81123';
   exit.style.cursor = 'context-menu';
 });
 
 exit.addEventListener('mouseout', function handleMouseOut() {
-  exit.style.backgroundColor = 'black';
+  exit.style.backgroundColor = '#d6dae0';
   exit.style.cursor = 'default';
 });
 
@@ -79,20 +79,14 @@ $("#square").click(enlarge);
 function enlarge(){
   if(square.classList.contains("enlarged")){
     $("#window").css("width", "40%");
-    $("#title-bar-width").css('width', '100%').css('width', '+=2px');
+    $("#title-bar-width").css('width', '100%');
     $("#content").css("width", "100%");
     $("#square").removeClass("enlarged");
   }
   else{
     $("#window").css("width", "70%");
-    $("#title-bar-width").css('width', '100%').css('width', '+=2px');
+    $("#title-bar-width").css('width', '100%');
     $("#content").css("width", "100%");
     $("#square").addClass("enlarged");
   }
 }
-
-
-//// Pop-up appear on click with delay ////
-$("#clickme").click(function(){
-    $("#window").fadeIn(300);
-  });
